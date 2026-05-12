@@ -33,37 +33,37 @@ all:
         # ansible_become: yes
         # ansible_become_method: enable
       children:
-        DC1:
+        CAMPUS:
           children:
-            DC1_SPINES:
+            CAMPUS_SPINES:
               vars:
                 type: spine
               hosts:
-                dc1-spine1:
+                spine1:
                   ansible_host: 192.168.0.111
-                dc1-spine2:
+                spine2:
                   ansible_host: 192.168.0.112
-            DC1_LEAVES:
+            LEAVES:
               vars: 
                 type: l3leaf
               hosts:
-                dc1-leaf1:
+                leaf1:
                   ansible_host: 192.168.0.101
-                dc1-leaf2:
+                leaf2:
                   ansible_host: 192.168.0.102
-                dc1-leaf3:
+                leaf3:
                   ansible_host: 192.168.0.103
-                dc1-leaf4:
+                leaf4:
                   ansible_host: 192.168.0.104
-                dc1-leaf5:
+                leaf5:
                   ansible_host: 192.168.0.105
-                dc1-leaf6:
+                leaf6:
                   ansible_host: 192.168.0.106
-                dc1-borderleaf1:
+                borderleaf1:
                   ansible_host: 192.168.0.107
-                dc1-borderleaf2:
+                borderleaf2:
                   ansible_host: 192.168.0.108
-            # DC1_ZTX:
+            # ZTX:
             #   vars: 
             #     type: service_leaf
             #   hosts:
@@ -71,7 +71,7 @@ all:
             #       ansible_host: 192.168.0.121
     EVPN_SERVICES:
       children:
-        DC1_LEAVES:
+        LEAVES:
     ENDPOINT_CONNECT:
       children:
-        DC1_LEAVES:
+        LEAVES:
