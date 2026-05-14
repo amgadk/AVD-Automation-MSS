@@ -1,0 +1,45 @@
+# testing/catalog.yml
+testing.custom:
+  # ==========================================
+  #  STAFF-H1 DATA PLANE PROTOCOL TESTING
+  # ==========================================
+  - ICMP:
+      filters:
+        tags: ["Staff-H1"]
+      hosts:
+        - destination: 172.16.21.10
+          vrf: default
+          repeat: 5
+
+  - UDP:
+      filters:
+        tags: ["Staff-H1"]
+      destination: 172.16.31.10
+      port: 53
+      protocol: udp
+
+  - Telnet:
+      filters:
+        tags: ["Staff-H1"]
+      destination: 172.16.21.10
+      port: 23
+      protocol: tcp
+
+  # ==========================================
+  #  MEDIA-H2 DATA PLANE PROTOCOL TESTING
+  # ==========================================
+  - ICMP:
+      filters:
+        tags: ["Media-H2"]
+      hosts:
+        - destination: 172.16.31.10
+          vrf: default
+          repeat: 5
+
+
+
+
+
+
+
+
