@@ -12,6 +12,14 @@ testing.custom:
           vrf: "default"
           repeat: 5
 
+  - ICMP:
+      filters:
+        tags: ["Staff-H1"]
+      hosts:
+        - destination: "172.16.31.10" # Check reachability to IOT-H3
+          vrf: "default"
+          repeat: 5
+
   # ==========================================
   #  MEDIA-H2 DATA PLANE PROTOCOL CONFIG
   # ==========================================
