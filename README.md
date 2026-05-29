@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src='images/Security-Lab Topology - Campus.png' alt='Arista DC Fabric'/>
+  <img src='images/MSS-Multi-Campus.png' alt='Arista DC Fabric'/>
 </p>
 
 # FABRIC
